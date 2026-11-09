@@ -1,0 +1,106 @@
+/* VARIABLES DE DISEÑO (GUÍA DE ESTILO) */
+:root {
+    /* Fondo: Un blanco hueso/crema muy sutil, cálido */
+    --color-fondo: #fffdf7;       
+    
+    /* Texto: Gris oscuro con un toque café */
+    --color-texto: #25272a;       
+    
+    /* Primario: Terracota (Naranja/Café). Profesional y que inspira calma*/
+    --color-primario: #ffcd29;    
+    
+    --fuente-principal: 'Arial', sans-serif; 
+}
+
+/* --- CONFIGURACIÓN GENERAL --- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--fuente-principal);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    
+    /* Truco de Flexbox para centrar todo en medio de la pantalla */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Altura completa de la ventana */
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* --- ESTILOS ESPECÍFICOS --- */
+.contenedor-principal {
+    max-width: 600px; /* Que no se estire demasiado a los lados */
+    padding: 40px;
+    background-color: white; /* Tarjeta blanca */
+    border-radius: 20px;     /* Bordes redondeados */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.09); /* Sombra muy suave con tinte cálido */
+}
+
+.logo {
+    display: block;
+    width: min(100%, 440px);
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.titulo-principal {
+    font-size: 2.5rem; /* Tamaño grande */
+    color: var(--color-texto); /* variable de color */
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.descripcion {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #737778; /* Gris cálido para el texto secundario */
+    margin-bottom: 30px;
+}
+
+.separador {
+    height: 4px;
+    width: 50px;
+    background-color: var(--color-primario);
+    margin: 0 auto 30px auto; /* Centrado horizontalmente */
+    border-radius: 2px;
+}
+
+.creditos {
+    font-size: 0.9rem;
+    color: #737778; /* Color suave para créditos */
+    border-top: 1px solid #eaeaea;
+    padding-top: 20px;
+}
+
+.nombres {
+    font-weight: bold;
+    color: var(--color-texto);
+    font-size: 1rem;
+}
+
+.template{
+    font-weight: bold;
+    color: var(--color-texto);
+    font-size: 0.5rem;
+}
+/* DATOS DEL EQUIPO */
+.nombres {
+    line-height: 1.65;
+}
+
+.honor {
+    font-size: 0.8rem;
+    color: #737778;
+    line-height: 1.45;
+}
+
+@media (max-width: 650px) {
+    body { height: auto; min-height: 100vh; padding: 20px; box-sizing: border-box; }
+    .contenedor-principal { padding: 25px; }
+    .titulo-principal { font-size: 2rem; }
+}
